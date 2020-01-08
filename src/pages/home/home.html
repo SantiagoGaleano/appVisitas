@@ -1,14 +1,114 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Visitas TyT Asesorias de Calidad
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+  <form action="">
+    <ion-list >
+        <ion-item >
+          <ion-icon name= "card" item-left> </ion-icon>
+          <ion-label stacked> Número de crédito </ion-label>
+          <ion-input
+          type="text"
+          placeholder= "Número de credito"
+          name= "credito"
+          >
+          </ion-input>
+
+        </ion-item>
+
+        <ion-item >
+            <ion-icon name= "person" item-left> </ion-icon>
+            <ion-label stacked> Nombre</ion-label>
+            <ion-input
+            type="text"
+            placeholder= "Nombre"
+            name= "nombre"
+            >
+            </ion-input>
+  
+          </ion-item>
+
+          <ion-item >
+              <ion-icon name= "pin" item-left> </ion-icon>
+              <ion-label stacked> Dirección </ion-label>
+              <ion-input
+              type="text"
+              placeholder= "Dirección"
+              name= "direccion"
+              >
+              </ion-input>
+    
+            </ion-item>
+
+            <ion-item >
+                <ion-icon name= "chatboxes" item-left> </ion-icon>
+                <ion-label stacked> Observacion </ion-label>
+                <ion-input
+                type="text"
+                placeholder= "Observacion"
+                name= "observacion"
+                >
+                </ion-input>
+      
+              </ion-item>
+
+              <ion-item>
+                  <ion-icon name= "git-merge" item-left> </ion-icon>
+                  <ion-label > Tipo de Gestión </ion-label>
+                  
+                  <ion-select  interface="popover">
+                    <ion-option value="s_contacto">Sin contacto</ion-option>
+                    <ion-option value="mensaje">Mensaje</ion-option>
+                    <ion-option value="c_directo">Contacto Directo</ion-option>
+                   
+                  </ion-select>
+              </ion-item>
+             
+
+              <ion-item>
+                  <ion-icon name= "transgender" item-left> </ion-icon>
+                  <ion-label > Sub Tipificación </ion-label>
+                  
+                  <ion-select  interface="popover">
+                    <ion-option value="d_incompleta">Dirección incompleta</ion-option>
+                    <ion-option value="c_porteria">Carta en porteria</ion-option>
+                    <ion-option value="n_vive"> No vive/No trabaja</ion-option>
+                    <ion-option value="n_carta"> No reciben carta </ion-option>
+                    <ion-option value="d_inexistente"> Direccion inexistente</ion-option>
+                    <ion-option value="renuente"> Renuente</ion-option>
+                    <ion-option value="voluntad"> Voluntad</ion-option>
+                    <ion-option value="a_riesgo"> Alto Riesto/Dificil Acceso</ion-option>
+                    <ion-option value="p_fallecido"> Posible Fallecido</ion-option>
+                    <ion-option value="m_tercero"> Mensaje Tercero</ion-option>
+                    <ion-option value="presion"> Presion</ion-option>
+                    <ion-option value="b_puerta"> Carta Bajo Puerta</ion-option>
+                   
+                  </ion-select>
+              </ion-item>
+             
+
+              <ion-item>
+                  <ion-icon name= "contacts" item-left> </ion-icon>
+                  <ion-label > Tipo de Contacto </ion-label>
+                  
+                  <ion-select  interface="popover">
+                    <ion-option value="d_incompleta">Titular </ion-option>
+                    <ion-option value="c_porteria">Familiar</ion-option>
+                    <ion-option value="n_vive">Tercero</ion-option>
+                    
+                   
+                  </ion-select>
+              </ion-item>
+              <button style="margin-top: 20px" ion-button>Enviar</button>
+    </ion-list>
+  </form>
+
+  
+
 </ion-content>
