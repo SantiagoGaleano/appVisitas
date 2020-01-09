@@ -1,5 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { AngularFireDatabase} from '@angular/fire/database'
+
 
 /*
   Generated class for the VisitasProvider provider.
@@ -10,8 +11,14 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class VisitasProvider {
 
-  constructor(public http: HttpClient) {
+  constructor(public afBD: AngularFireDatabase ) {
     console.log('Hello VisitasProvider Provider');
+  }
+
+  public saveVisit(visit){
+    let key = this.afBD.list('/visit/').push(visit).key;
+    visit.id = key;
+    this.afBD.database.ref('visit/'+ visit.id).set(visit);
   }
 
 }
