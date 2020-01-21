@@ -21,4 +21,9 @@ export class VisitasProvider {
     this.afBD.database.ref('visit/'+ visit.id).set(visit);
   }
 
+  public getVisits(id){
+    return this.afBD.object('visit/'+id).valueChanges();
+    
+}
+
 }

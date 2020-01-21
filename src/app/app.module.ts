@@ -14,6 +14,8 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
+
+
 export const firebaseConfig = {
   apiKey: "AIzaSyA_qjoRd6dg04hvMH8DLhNiuNtoZr1e5_A",
   authDomain: "appvisitas-5ecbb.firebaseapp.com",
@@ -26,6 +28,8 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { VisitasProvider } from '../providers/visitas/visitas';
 import { PushnotificationProvider } from '../providers/pushnotification/pushnotification';
+import { Geolocation } from '@ionic-native/geolocation';
+
 
 @NgModule({
   declarations: [
@@ -47,11 +51,14 @@ import { PushnotificationProvider } from '../providers/pushnotification/pushnoti
   providers: [
     StatusBar,
     SplashScreen,
+    
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AngularFireDatabase,
     VisitasProvider,
     OneSignal,
-    PushnotificationProvider
+    Geolocation,
+    PushnotificationProvider,
+    
   ]
 })
 export class AppModule {}
