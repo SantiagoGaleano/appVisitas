@@ -29,35 +29,40 @@ import { HomePage } from '../pages/home/home';
 import { VisitasProvider } from '../providers/visitas/visitas';
 import { PushnotificationProvider } from '../providers/pushnotification/pushnotification';
 import { Geolocation } from '@ionic-native/geolocation';
-
+import { AuthenticationProvider } from '../providers/authentication/authentication';
+import {enviroment} from '../enviroments/enviroment';
+import { LoginPage } from '../pages/login/login';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireModule.initializeApp(enviroment.firebase),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule 
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    LoginPage
+    
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AngularFireDatabase,
     VisitasProvider,
     OneSignal,
     Geolocation,
     PushnotificationProvider,
+    AuthenticationProvider,
     
   ]
 })
