@@ -28,6 +28,8 @@ constructor(public navCtrl: NavController, public navParams: NavParams, private 
     this.afAuth.auth.signInWithEmailAndPassword(this.user.email,this.user.password)
     .then((user) => {
       this.navCtrl.setRoot(HomePage);
+      console.log('hola uid',this.afAuth.auth.currentUser.uid);
+
       
     })
     .catch(err=>{
